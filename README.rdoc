@@ -1,1 +1,1 @@
-Rails Saple App: book_shelf
+Rails Sample App: book_shelf
