@@ -1,6 +1,8 @@
-%h1 Listing books
+%h1 書籍一覧
+= link_to '書籍の新規登録', new_book_path, class: 'btn btn-primary'
+= link_to 'レビューの新規作成', new_review_path, class: 'btn btn-primary'
 
-%table
+%table.table.table-striped
   %thead
     %tr
       %th Title
@@ -16,10 +18,7 @@
         %td= book.title
         %td= book.author
         %td= book.price
-        %td= link_to 'Show', book
-        %td= link_to 'Edit', edit_book_path(book)
-        %td= link_to 'Destroy', book, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to '確認', book
+        %td= link_to '編集', edit_book_path(book)
+        %td= link_to '削除', book, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
-
-= link_to 'New Book', new_book_path
